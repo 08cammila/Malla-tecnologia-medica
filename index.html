@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Malla Curricular TMED Morfofisiopatología y Citodiagnóstico</title>
+  <link rel='stylesheet' href='style.css'>
+  <style>
+    h1 { font-size: 20px; text-align: center; }
+    .malla-grid { display: flex; gap: 10px; overflow-x: auto; padding: 10px; }
+    .semestre { min-width: 200px; background: white; border-radius: 8px; border: 1px solid #f0c0dd; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .semestre h2 { text-align: center; background: #f5c1e0; margin: 0; padding: 10px; font-size: 16px; }
+    .ramo { padding: 10px; border-bottom: 1px solid #f0c0dd; text-align: center; }
+    .ramo:last-child { border-bottom: none; }
+    .estado { font-weight: bold; cursor: pointer; padding: 5px; border-radius: 4px; display: inline-block; }
+  </style>
+</head>
+<body>
+<h1>Malla Curricular TMED Morfofisiopatología y Citodiagnóstico</h1>
+<div class='malla-grid'>
+<div class='semestre'><h2>Semestre 1</h2>
+<div id='integrado-de-habilidades-cient-ficas-para-la-tecnolog-a-m-dica' class='ramo pendiente' ><div>Integrado de Habilidades Científicas para la Tecnología Médica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='antropolog-a' class='ramo pendiente' ><div>Antropología</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='introducci-n-a-la-tecnolog-a-m-dica' class='ramo pendiente' ><div>Introducción a la Tecnología Médica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='biolog-a-celular' class='ramo pendiente' ><div>Biología Celular</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='matem-tica-b-sica' class='ramo pendiente' ><div>Matemática Básica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='qu-mica-general-y-org-nica' class='ramo pendiente' ><div>Química General y Orgánica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 2</h2>
+<div id='tica' class='ramo pendiente' data-prerreq='Antropología'><div>Ética </div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='bioseguridad-y-procedimientos-de-apoyo-diagn-stico' class='ramo pendiente' ><div>Bioseguridad y Procedimientos de Apoyo Diagnóstico</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='tecnolog-a-m-dica-en-el-equipo-de-salud' class='ramo pendiente' data-prerreq='Introducción a la TMED'><div>Tecnología Médica en el Equipo de Salud</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='morfolog-a-b-sica' class='ramo pendiente' ><div>Morfología Básica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='bioqu-mica-general' class='ramo pendiente' data-prerreq='Química General y Orgánica'><div>Bioquímica General</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='psicolog-a-de-atenci-n-al-paciente' class='ramo pendiente' ><div>Psicología de Atención al Paciente</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 3</h2>
+<div id='bioan-lisis-instrumental' class='ramo pendiente' data-prerreq='Bioquímica General'><div>Bioanálisis Instrumental</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='bases-f-sicas-de-la-microscop-a' class='ramo pendiente' data-prerreq='Matemática Básica'><div>Bases Físicas de la Microscopía</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='infectolog-a-b-sica' class='ramo pendiente' data-prerreq='Morfología Básica'><div>Infectología Básica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='integrado-fisiolog-a-fisiopatolog-a-farmacolog-a-i' class='ramo pendiente' data-prerreq='Bioquímica General'><div>Integrado Fisiología - Fisiopatología - Farmacología I</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='salud-poblacional' class='ramo pendiente' ><div>Salud Poblacional</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 4</h2>
+<div id='bio-tica' class='ramo pendiente' ><div>Bioética </div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='histoembriolog-a-cl-nica' class='ramo pendiente' data-prerreq='Morfología Básica'><div>Histoembriología Clínica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='integrado-fisiolog-a-fisiopatolog-a-farmacolog-a-ii' class='ramo pendiente' data-prerreq='Integrado Fisiología - Fisiopatología - Farmacología I'><div>Integrado Fisiología - Fisiopatología - Farmacología II</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='bases-para-el-procesamiento-citohistol-gico' class='ramo pendiente' data-prerreq='Bases Físicas de la Microscopía'><div>Bases para el Procesamiento Citohistológico</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='epidemiolog-a' class='ramo pendiente' data-prerreq='Salud Poblacional'><div>Epidemiología</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 5</h2>
+<div id='bases-del-diagn-stico-citogen-tico' class='ramo pendiente' data-prerreq='Bases Para el Procesamiento Citohistológico'><div>Bases del Diagnóstico Citogenético</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='persona-y-sociedad' class='ramo pendiente' data-prerreq='Ética'><div>Persona y Sociedad</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='histopatolog-a-general' class='ramo pendiente' data-prerreq='Histoembriología Clínica'><div>Histopatología General</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='procedimientos-para-el-an-lisis-citohistol-gico' class='ramo pendiente' data-prerreq='Bases Para el Procesamiento Citohistológico'><div>Procedimientos para el Análisis Citohistológico</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='bioestad-stica' class='ramo pendiente' data-prerreq='Matemática Básica '><div>Bioestadística</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 6</h2>
+<div id='integrado-citohistol-gico-general' class='ramo pendiente' data-prerreq='Procedimientos para el Análisis Citohistológico y Bases del Diagnóstico Citogenético'><div>Integrado Citohistológico General </div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='gesti-n-en-equipos-para-el-alto-desempe-o' class='ramo pendiente' ><div>Gestión en Equipos para el Alto Desempeño</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='diagn-stico-citogen-tico-cl-nico' class='ramo pendiente' data-prerreq='Bases del Diagnóstico Citogenético '><div>Diagnóstico Citogenético Clínico</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='histopatolog-a-avanzada' class='ramo pendiente' data-prerreq='Histopatología General'><div>Histopatología Avanzada</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='an-lisis-histoqu-mico' class='ramo pendiente' data-prerreq='Procedimientos para el Análisis Citohistológico'><div>Análisis Histoquímico</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='electivo-i-formaci-n-e-identidad' class='ramo pendiente' ><div>Electivo I: Formación e Identidad</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 7</h2>
+<div id='diagn-stico-molecular' class='ramo pendiente' data-prerreq='Diagnóstico Citogenético Clínico '><div>Diagnóstico Molecular </div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='inform-tica-m-dica-para-histopatolog-a' class='ramo pendiente' data-prerreq='Integrado Citohistológico Inicial '><div>Informática Médica para Histopatología</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='inmunohistoqu-mica-aplicada' class='ramo pendiente' data-prerreq='Análisis Histoquímico'><div>Inmunohistoquímica Aplicada</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='citodiagn-stico-ginecol-gico-general' class='ramo pendiente' data-prerreq='Histopatología Avanzada '><div>Citodiagnóstico Ginecológico General</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='metodolog-a-de-la-investigaci-n' class='ramo pendiente' ><div>Metodología de la Investigación</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='electivo-ii-formaci-n-e-identidad' class='ramo pendiente' ><div>Electivo II: Formación e Identidad</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 8</h2>
+<div id='aplicaciones-del-diagn-stico-molecular' class='ramo pendiente' data-prerreq='Diagnóstico Molecular'><div>Aplicaciones del Diagnóstico Molecular </div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='integrado-citohistol-gico-cl-nico' class='ramo pendiente' data-prerreq='Inmunohistoquímica Aplicada y Citodiagnóstico Ginecológico General '><div>Integrado Citohistológico Clínico</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='citopatolog-a-ginecol-gica-y-miscel-nea' class='ramo pendiente' data-prerreq='Citodiagnóstico Ginecológico General '><div>Citopatología Ginecológica y Miscelánea</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='salud-digital' class='ramo pendiente' ><div>Salud Digital</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='electivo-iii-formaci-n-e-identidad' class='ramo pendiente' ><div>Electivo III: Formación e Identidad</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 9</h2>
+<div id='electivo-2' class='ramo pendiente' ><div>Electivo 2</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='electivo-1' class='ramo pendiente' ><div>Electivo 1</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='gesti-n-de-carrera-y-desarrollo-profesional' class='ramo pendiente' ><div>Gestión de Carrera y Desarrollo Profesional</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='taller-de-investigaci-n-aplicado-en-tecnolog-a-m-dica' class='ramo pendiente' data-prerreq='Haber aprobado semestre 7 y 8 '><div>Taller de Investigación Aplicado en Tecnología Médica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+<div id='sistema-de-acreditaci-n-en-anatom-a-patol-gica' class='ramo pendiente' data-prerreq='Integrado Citohistológico Clínico'><div>Sistema de Acreditación en Anatomía Patológica</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+<div class='semestre'><h2>Semestre 10</h2>
+<div id='internado' class='ramo pendiente' data-prerreq='Haber aprobado todos los semestres anteriores'><div>Internado</div><div class='estado' onclick='cambiarEstado(this)'>Pendiente</div></div>
+</div>
+</div>
+<script src='script.js'></script>
+</body></html>
