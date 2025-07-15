@@ -1,0 +1,55 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff0f5;
+  color: #4b004b;
+  margin: 20px;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #aa336a;
+}
+
+table.malla {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(170, 51, 106, 0.3);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table.malla thead {
+  background-color: #f5c1e0;
+}
+
+table.malla th, table.malla td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #f0c0dd;
+}
+
+.ramo.pendiente {
+  background-color: #ffe6f0;
+}
+
+.ramo.cursando {
+  background-color: #e6d6ff;
+}
+
+.ramo.aprobado {
+  background-color: #fdaecb;
+}
+
+td.estado {
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+td.estado:hover {
+  background-color: #ddd;
+}
